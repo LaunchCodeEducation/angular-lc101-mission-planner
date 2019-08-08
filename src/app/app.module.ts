@@ -4,18 +4,18 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { CrewComponent } from './crew/crew.component';
-import { RolesComponent } from './roles/roles.component';
-import { ModulesComponent } from './modules/modules.component';
 import { CountriesComponent } from './countries/countries.component';
+import { EquipmentComponent } from './equipment/equipment.component';
+import { ExperimentsComponent } from './experiments/experiments.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     CrewComponent,
-    RolesComponent,
-    ModulesComponent,
-    CountriesComponent
+    CountriesComponent,
+    EquipmentComponent,
+    ExperimentsComponent
   ],
   imports: [
     BrowserModule
