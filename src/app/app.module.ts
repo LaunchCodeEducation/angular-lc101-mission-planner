@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { CrewComponent } from './crew/crew.component';
-import { CountriesComponent } from './countries/countries.component';
 import { EquipmentComponent } from './equipment/equipment.component';
 import { ExperimentsComponent } from './experiments/experiments.component';
 
@@ -13,7 +12,6 @@ import { ExperimentsComponent } from './experiments/experiments.component';
     AppComponent,
     HeaderComponent,
     CrewComponent,
-    CountriesComponent,
     EquipmentComponent,
     ExperimentsComponent
   ],
