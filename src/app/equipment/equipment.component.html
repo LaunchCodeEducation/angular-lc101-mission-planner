@@ -1,4 +1,19 @@
-<h3>Equipment</h3>
-<ul>
-  <li *ngFor="let item of equipmentItems">{{item}}</li>
-</ul>
+<div class="displayBox">
+    <h3>Equipment</h3>
+    <ol>
+        <li *ngFor="let item of equipmentItems">{{item.name}} <button [disabled]="item.mass+totalMass>700 || cargoHold.length>=6" (click)="addItem(item)">Add to Cargo Hold</button></li>
+    
+    </ol>
+</div>
+
+<hr>
+
+<div class = "displayBox">
+    <h3>Cargo Hold</h3>
+    <ul>
+        <li *ngFor="let item of cargoHold">{{item.name}}</li>
+    </ul>
+    <p>Items: {{cargoHold.length}}, <span [class.red]="totalMass >= 650">Mass: {{totalMass}} kg</span></p>
+    <button (click)="cargoHold=[]; totalMass=0">Empty Hold</button>
+</div>
+

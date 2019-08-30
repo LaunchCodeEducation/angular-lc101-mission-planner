@@ -1,24 +1,14 @@
-<h3>Crew</h3>
-<ul>
-  <li *ngFor="let member of crew">
-
-      <span *ngIf="memberBeingEdited !== member; else elseBlock">
-          <!-- display state of member -->
-          <span (click)="edit(member)" class="editable-text">{{member.name}}</span>
-          <span *ngIf="member.firstMission">
-            - 1st
-          </span>
-          <button (click)="remove(member)">remove</button>
-      </span>
-      
-      <ng-template #elseBlock>
-          <!-- edit state of member -->
-          <input #updatedName (keyup.enter)="save(updatedName.value, member)" [value]="member.name"/>
-          <button (click)="save(updatedName.value, member)">save</button>
-      </ng-template>
-
-    </li>
-</ul>
-<input #name type="text"/>
-<label>First mission<input #firstMission type="checkbox"/></label>
-<button (click)="add(name.value, firstMission.checked); name.value = ''">Add</button>
+<div class="displayBox">
+    <h3>Candidates</h3>
+    <ul>
+        <li [class.red]="crew.includes(member)" *ngFor="let member of candidates" (click)="addCrewMember(member)">{{member.name}}</li>
+    </ul>
+</div>
+<hr>
+<div class="displayBox">
+    <h3>Crew</h3>
+    <ol>
+        <li *ngFor="let member of crew" (mouseover)="selected = member" (mouseout)="selected = false">{{member.name}}</li>
+    </ol>
+    <img *ngIf="selected" [src]="selected.photo"/>
+</div>

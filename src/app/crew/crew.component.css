@@ -9,3 +9,19 @@ button:hover {
 .editable-text {
     cursor: pointer;
 }
+
+.displayBox {
+    height: 175px;
+}
+
+img {
+    width: auto;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.red {
+    color:red;
+}
