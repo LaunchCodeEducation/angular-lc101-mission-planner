@@ -1,0 +1,11 @@
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    color: blue;
+}
+
+.editable-text {
+    cursor: pointer;
+}
