@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { createSecureContext } from 'tls';
 
 @Component({
   selector: 'app-crew',
@@ -24,8 +23,7 @@ export class CrewComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   addCrewMember(member: object) {
     for (let i=0; i < this.crew.length; i++) {
@@ -36,23 +34,10 @@ export class CrewComponent implements OnInit {
     if (this.inCrew) {
         let index = this.crew.indexOf(member);
         this.crew.splice(index, 1);
-    }else if (!this.inCrew && this.crew.length < 3) {
+    } else if (!this.inCrew && this.crew.length < 3) {
         this.crew.push(member);
     }
     this.inCrew = false;
   }
 
-  remove(member: object) {
-    let index = this.crew.indexOf(member);
-    this.crew.splice(index, 1);
-  }
-
-  edit(member: object) {
-    this.memberBeingEdited = member;
-  }
-
-  save(name: string, member: object) {
-    member['name'] = name;
-    this.memberBeingEdited = null;
-  }
 }

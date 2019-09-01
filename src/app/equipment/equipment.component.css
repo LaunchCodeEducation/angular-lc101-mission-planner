@@ -1,7 +1,17 @@
 .displayBox {
-    height: 175px;
+    height: 250px;
+    width: auto;
 }
 
-.red {
+.nearMaxMass {
     color:red;
+}
+
+button {
+    margin: 2px;
+    cursor: pointer;
+}
+
+h3 {
+    text-align: center;
 }

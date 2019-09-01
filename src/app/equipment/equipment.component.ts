@@ -7,15 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EquipmentComponent implements OnInit {
    equipmentItems: object[] = [
-       {name: 'Duct Tape', mass: 1},
+       {name: 'Duct Tape', mass: 0.5},
        {name: 'Space Camera', mass: 20},
-       {name: 'Food', mass: 100},
-       {name: 'Oxygen Tanks', mass: 500},
-       {name: 'AE-35 Unit', mass: 50},
-       {name: 'Parrot', mass: 2}
+       {name: 'Food', mass: 150},
+       {name: 'Oxygen Tanks', mass: 400},
+       {name: 'AE-35 Unit', mass: 5},
+       {name: 'ISS Supplies', mass: 800},
+       {name: 'Water', mass: 250},
+       {name: 'Satellite', mass: 1200},
+       {name: 'R2 Unit', mass: 32}
    ];
    cargoHold: object[] = [];
-   totalMass: number = 0;
+   cargoMass: number = 0;
+   maximumAllowedMass: number = 2000;
+   maxItems: number = 10;
 
    constructor() { }
 
@@ -23,7 +28,7 @@ export class EquipmentComponent implements OnInit {
 
    addItem(item : object) : boolean {
       this.cargoHold.push(item);
-      this.totalMass += item['mass'];
-      return this.totalMass >= 500;
+      this.cargoMass += item['mass'];
+      return item['mass']+this.cargoMass > this.maximumAllowedMass;
    }
 }
