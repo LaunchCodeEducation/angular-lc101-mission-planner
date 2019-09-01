@@ -14,10 +14,10 @@ img {
     display: block;
 }
 
-.selected {
-    color:blue;
-}
-
 h3 {
     text-align: center;
+}
+
+.selected {
+    color:blue;
 }

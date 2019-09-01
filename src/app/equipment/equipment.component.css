@@ -3,10 +3,6 @@
     width: auto;
 }
 
-.nearMaxMass {
-    color:red;
-}
-
 button {
     margin: 2px;
     cursor: pointer;
@@ -18,4 +14,10 @@ h3 {
 
 .active {
     background: gold;
+}
+
+.nearMaxMass {
+    color:red;
+    font-style: italic;
+    font-weight: bold;
 }
