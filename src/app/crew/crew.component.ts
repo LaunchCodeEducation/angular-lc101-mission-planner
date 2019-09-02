@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrewComponent implements OnInit {
 
-  memberBeingEdited: object = null;
   inCrew: boolean = false;
   crew: object[] = [];
 
@@ -25,19 +24,6 @@ export class CrewComponent implements OnInit {
 
   ngOnInit() { }
 
-  addCrewMember(member: object) {
-    for (let i=0; i < this.crew.length; i++) {
-        if(this.crew[i] === member) {
-            this.inCrew = true;
-        }
-    }
-    if (this.inCrew) {
-        let index = this.crew.indexOf(member);
-        this.crew.splice(index, 1);
-    } else if (!this.inCrew && this.crew.length < 3) {
-        this.crew.push(member);
-    }
-    this.inCrew = false;
-  }
+  // Code the 'addCrewMember' function here:
 
 }
