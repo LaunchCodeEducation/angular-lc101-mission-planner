@@ -4,6 +4,7 @@ li:hover {
 
 .displayBox {
     height: 250px;
+    width: auto;
 }
 
 img {
@@ -14,10 +15,8 @@ img {
     display: block;
 }
 
-.selected {
-    color:blue;
-}
-
 h3 {
     text-align: center;
 }
+
+/* Add a 'selected' class here to style selected astronaut names a different color. */
