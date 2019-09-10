@@ -3,7 +3,8 @@ li:hover {
 }
 
 .displayBox {
-    height: 250px;
+    height: 275px;
+    width: auto;
 }
 
 img {
