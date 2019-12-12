@@ -6,13 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./crew.component.css']
 })
 export class CrewComponent implements OnInit {
-<<<<<<< HEAD
-  memberBeingEdited: object = null;
-  crew: object[] = [
-    {name: "Eileen Collins", firstMission: false},
-    {name: "Mae Jemison", firstMission: false},
-    {name: "Ellen Ochoa", firstMission: true}
-=======
+
 
   inCrew: boolean = false;
   crew: object[] = [];
@@ -25,7 +19,7 @@ export class CrewComponent implements OnInit {
     {name: "Guion Bluford", photo: 'https://handlers.education.launchcode.org/static/images/guion-bluford.jpg'},
     {name: "Kjell Lindgren", photo: 'https://handlers.education.launchcode.org/static/images/kjell-lindgren.jpg'},
     {name: "Jeanette Epps", photo: 'https://handlers.education.launchcode.org/static/images/jeanette-epps.jpg'}
->>>>>>> df088481627ca8d82d5d5e6537a62e28242f4ab9
+
   ];
 
   constructor() { }
