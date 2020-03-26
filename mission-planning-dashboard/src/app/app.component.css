@@ -1,4 +1,22 @@
+.header {
+    text-align: center;
+}
+
+app-header {
+    display: inline-block;
+}
+
+body { 
+    border:groove;
+    background-color: rgba(77, 150, 163, 0.959)
+}
+
 .box {
+    margin:10px;
     display: flex;
     padding: 10px;
+    justify-content: space-evenly;
+    border: dotted;
+    border-color: darkgray;
+    background-color: darkblue;
 }

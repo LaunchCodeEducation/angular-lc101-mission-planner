@@ -1,0 +1,26 @@
+body {
+    margin: 3vw;
+    width: 70vw;
+    border-bottom-right-radius: 2vw;
+    border-top-left-radius: 2vw;
+    border-width: .5vw;
+    border-style: inset;
+    border-color: silver;
+    background-image: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/330100/64821ce2c3b454cd4762cb1c97b26f396f8cc033.jpg');
+    background-position: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: white;
+    text-decoration: underline;
+    font-size: 5vw;
+    text-align: center;
+}
+
+h3 {
+    color :white;
+    text-decoration: overline;
+    text-align: center;
+    font-size: 3vw;
+}
