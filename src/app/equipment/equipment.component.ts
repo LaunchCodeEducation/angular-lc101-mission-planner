@@ -25,7 +25,9 @@ export class EquipmentComponent implements OnInit {
    constructor() { }
 
    ngOnInit() { }
-
+   counter(i:number){
+    return new Array(i);
+  }
    addItem(equipment: {name, mass}): boolean{
      this.cargoHold.push(equipment);
      this.cargoMass+=equipment.mass;
@@ -34,12 +36,20 @@ export class EquipmentComponent implements OnInit {
      }
      return false;
    }
+   removeItem(equipment: {name, mass}): boolean{
+    //find index of equipment
+    let index=this.cargoHold.indexOf(equipment);
+    //removed specified equip
+    this.cargoHold.splice(index, 1);
+    this.cargoMass-=equipment.mass;
+    return true;
+    }
 
    emptyHold(){
      this.cargoMass=0;
      this.cargoHold=[];
    }
 
-   // Code your addItem function here:
+   
    
 }
