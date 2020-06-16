@@ -6,10 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./crew.component.css']
 })
 export class CrewComponent implements OnInit {
-
-  mousey:boolean=false;
-  inCrew: boolean = false;
+  // inCrew: boolean = false;
   crew: object[] = [];
+  photo: boolean = false;
 
   candidates: object[] = [
     {name: "Sally Ride", photo: 'https://handlers.education.launchcode.org/static/images/sally-ride.jpg'},
@@ -25,13 +24,11 @@ export class CrewComponent implements OnInit {
 
   ngOnInit() { }
 
-  addCrewMember(candidate:{name, photo}){
-    if(!this.crew.includes(candidate)&&this.crew.length<3){
+  addCrewMember(candidate: object): void {
+    if (!this.crew.includes(candidate) && this.crew.length < 3) {
       this.crew.push(candidate);
-    }
-    else if(this.crew.includes(candidate)){
+    } else if (this.crew.includes(candidate)) {
       this.crew.splice(this.crew.indexOf(candidate),1);
     }
   }
-
 }

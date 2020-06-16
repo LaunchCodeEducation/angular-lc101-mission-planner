@@ -41,7 +41,7 @@ export class EquipmentComponent implements OnInit {
   //  }
 
    // Code your addItem function here:
-   addItem(item: object): void {
+   addItem(item: {name, mass}): void {
      this.cargoHold.push(item);
      this.cargoMass += item.mass;
    }
