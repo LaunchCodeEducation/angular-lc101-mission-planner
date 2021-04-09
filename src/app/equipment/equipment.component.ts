@@ -27,8 +27,9 @@ export class EquipmentComponent implements OnInit {
     }
   }
 
-  remove() {
-
+  remove(item: string) {
+    let index = this.equipment.indexOf(item);
+    this.equipment.splice(index,1);
   }
 
   edit(item: string) {
@@ -38,6 +39,6 @@ export class EquipmentComponent implements OnInit {
   save () {
 
   }
-  
+
 }
 

@@ -1,7 +1,8 @@
 <h3>Equipment</h3>
 <ul>
-  <li *ngFor = "let item of equipment">{{item}}
-    <
+  <li *ngFor = "let item of equipment">
+    {{item}}
+    <button (click) = "remove(item)">Remove</button>
   </li>
   
 </ul>
