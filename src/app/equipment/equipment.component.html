@@ -8,9 +8,10 @@
   </li>
   
   <ng-template #editEquipment>
-    <input #updateEquipment type="text" (keyup.enter)="save(updateEquipment.value,itemBeingEdited)" />
+    <input #updateEquipment type="text" (keyup.enter)="save(updateEquipment.value,itemBeingEdited)" value = "{{itemBeingEdited}}" />
     <button (click)="save(updateEquipment.value, itemBeingEdited)">Save</button>
   </ng-template>
+  
 </ul>
 <input #newItem type= "text" (keyup.enter)="add(newItem.value)"/>
 <button (click)="add(newItem.value)">Add</button>
