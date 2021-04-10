@@ -13,6 +13,8 @@ export class ExperimentsComponent implements OnInit {
     "Human bone density"
   ]
 
+  selectedExperiment: string = ""
+
   constructor() { }
 
   ngOnInit() {
@@ -27,5 +29,14 @@ export class ExperimentsComponent implements OnInit {
   remove(experiment: string) {
     let index = this.experiments.indexOf(experiment);
     this.experiments.splice(index,1)
+  }
+
+  edit(experiment:string) {
+    this.selectedExperiment = experiment
+  }
+
+  save(experiment: string, editedExperiment: string){
+    let index = this.experiments.indexOf(experiment);
+    this.experiments.splice(index,1,editedExperiment)
   }
 }
