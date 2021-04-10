@@ -1,10 +1,16 @@
 <h3>Equipment</h3>
 <ul>
   <li *ngFor = "let item of equipment">
-    {{item}}
-    <button (click) = "remove(item)">Remove</button>
+    <span *ngIf="itemBeingEdited !== item; else editEquipment">
+      <span (click)="edit(item)">{{item}}</span>
+      <button (click) = "remove(item)">Remove</button>
+    </span>
   </li>
   
+  <ng-template #editEquipment>
+    <input #updateEquipment type="text" (keyup.enter)="save(updateEquipment.value,itemBeingEdited)" />
+    <button (click)="save(updateEquipment.value, itemBeingEdited)">Save</button>
+  </ng-template>
 </ul>
 <input #newItem type= "text" (keyup.enter)="add(newItem.value)"/>
 <button (click)="add(newItem.value)">Add</button>

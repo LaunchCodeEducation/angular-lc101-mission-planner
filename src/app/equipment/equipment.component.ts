@@ -36,8 +36,10 @@ export class EquipmentComponent implements OnInit {
     this.itemBeingEdited = item
   }
 
-  save () {
-
+  save (editItem: string, item: string) {
+    let index = this.equipment.indexOf(item);
+    this.equipment.splice(index,1,editItem);
+    this.itemBeingEdited = ""
   }
 
 }
