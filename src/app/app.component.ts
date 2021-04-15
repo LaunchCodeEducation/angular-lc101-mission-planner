@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mission-planning-dashboard';
+  editingRocket: boolean = false;
+  editingMission: boolean = false;
 }

@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  missionName: string = "Mars 2030";
-  rocketName: string = "Plasma Max";
+  missionName: string = "Apollo 11";
+  rocketName: string = "Saturn V";
+  editingRocket: boolean = false;
   editingMission: boolean = false;
   
   constructor() { }
@@ -21,4 +22,8 @@ export class HeaderComponent implements OnInit {
     this.editingMission = false;
   }
 
+  updateRocket(updatedName: string) {
+    this.rocketName = updatedName;
+    this.editingRocket = false;
+  }
 }
