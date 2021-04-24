@@ -10,7 +10,7 @@
         <span *ngIf = "crew.length === 3">Full</span>
     </h3>
     <ol>
-        <li (mouseover) = "reveal = true" (mouseout) = "reveal = false" *ngFor="let astronaut of crew">{{astronaut.name}}</li>
+        <li (mouseover) = "selected = astronaut" (mouseout) = "selected = false" *ngFor="let astronaut of crew">{{astronaut.name}}</li>
     </ol>
-    <img *ngIf = "reveal === true" [src]="crew[0].photo">
+    <img *ngIf = "selected" [src]="selected.photo">
 </div>
