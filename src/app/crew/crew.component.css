@@ -18,5 +18,7 @@ img {
 h3 {
     text-align: center;
 }
-
+.selected {
+    color: teal;
+}
 /* Add a 'selected' class here to style selected astronaut names a different color. */
