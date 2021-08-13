@@ -16,4 +16,8 @@ addExperiment(experiment){
     this.added.push(experiment);
     }
   }
+  removeExperiment(expAdded){
+    let index = this.added.indexOf(expAdded);
+    this.added.splice(index, 1);
+  }
 }

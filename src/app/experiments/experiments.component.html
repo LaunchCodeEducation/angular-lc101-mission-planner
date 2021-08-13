@@ -10,7 +10,9 @@
 <div class = "displayBox">
   <h3>Mission Experiments: </h3>
   <ol>
-      <li *ngFor="let new of added">{{new}}</li>
+    <li *ngFor="let expAdded of added">{{expAdded}}
+      <button (click)="removeExperiment(expAdded)">Finished</button>
+    </li>
       
   </ol>
   
