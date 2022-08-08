@@ -20,6 +20,12 @@ export class CrewComponent implements OnInit {
   }
 
   add(memberName: string, isFirst: boolean) {
+    
+    for(let member of this.crew) {
+      if (member.['name'] === memberName) {
+        return;
+      }
+    }
     this.crew.push({name: memberName, firstMission: isFirst});
   }
 
