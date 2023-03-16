@@ -1,0 +1,25 @@
+.displayBox {
+    height: 275px;
+    width: auto;
+}
+
+button {
+    margin: 2px;
+    cursor: pointer;
+}
+
+h3 {
+    text-align: center;
+}
+
+.active {
+    background: gold;
+}
+
+.nearMaxMass {
+    color:red;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
